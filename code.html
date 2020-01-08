@@ -2,9 +2,8 @@
 <html>
 <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
 <a-scene embedded arjs= 'trackingMethod: best; '>
-<a-marker type='pattern' patternUrl='models/pattern-chess-2.patt'></a-marker>
-<a-marker-camera preset='custom' type='pattern' url='models/pattern-chess-2.patt'></a-marker-camera>
 <a-anchor hit-testing-enabled='true'>
 	<a-entity 
 position="0.5 -2 -0.5"
@@ -12,6 +11,6 @@ scale="0.10 0.10 0.10"
 obj-model="obj: url(models/chess.obj);">
 </a-entity>
 </a-anchor>
-	<a-camera-static/>
+<a-marker-camera preset='custom' type='pattern' url='models/pattern-chess-2.patt'></a-marker-camera>
 </a-scene>
 </html>

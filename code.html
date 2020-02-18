@@ -12,19 +12,14 @@ gltf-model="url(models/chess.gltf)">
 </a-entity>
 	</a-marker>
 </a-scene>
-<script>
-
-  AFRAME.registerComponent('mappoint-handler', {
-
+AFRAME.registerComponent('mappoint-handler', {
     init: function() {
       const marker3 = document.querySelector("#marker1");
 	var e1=document.querySelector("#timer");
       marker3.addEventListener('click', function() {
-    		el.setAttribute('value', 'this is chess pawn');
+    		//el.setAttribute('value', 'this is chess pawn');
 	      document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
 });
         }
       });
-
-</script>
 </html>

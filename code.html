@@ -2,24 +2,15 @@
 <html>
 <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
 <a-scene embedded arjs= 'trackingMethod: best; '>
-<a-marker type="pattern" id="marker1" url="models/pattern-chess.patt" mappoint-handler>
+<a-marker markerhandler type="pattern" emitevents="true" cursor="rayOrigin: mouse" id="marker1" url="models/pattern-chess.patt">
 <a-text id="timer" clock-text value="" width="5" height="5" position="0 0 0" color="#FF0000" ></a-text>
-<a-entity
-position="0 0 0"
-scale="0.003 0.003 0.003"
-gltf-model="url(models/chess.gltf)">
-</a-entity>
+   <a-entity
+	position="0 0 0"
+	scale="0.003 0.003 0.003"
+	gltf-model="url(models/chess.gltf)">
+   </a-entity>
 	</a-marker>
 </a-scene>
-AFRAME.registerComponent('mappoint-handler', {
-    init: function() {
-      const marker3 = document.querySelector("#marker1");
-	var e1=document.querySelector("#timer");
-      marker3.addEventListener('click', function() {
-    		//el.setAttribute('value', 'this is chess pawn');
-	      document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
-});
-        }
-      });
 </html>

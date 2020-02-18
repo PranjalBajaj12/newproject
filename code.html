@@ -18,27 +18,12 @@ gltf-model="url(models/chess.gltf)">
 
     init: function() {
       const marker3 = document.querySelector("#marker1");
+	var e1=document.querySelector("#timer");
       marker3.addEventListener('click', function() {
-            			AFRAME.registerComponent('clock-text', {
-  init: function() {
-    var el = this.el;
-    this.ready = false;
-      el.addEventListener('textfontset', function() {
-      this.ready = true;
-    }.bind(this));
-  },
-  tick: function() {
-    var el = this.el;
-    if (!this.ready) {
-      return;
-    }
-    el.setAttribute('value', 'this is chess pawn');
-  }
+    		el.setAttribute('value', 'this is chess pawn');
 });
         }
       });
-    }
-  });
 
 </script>
 </html>

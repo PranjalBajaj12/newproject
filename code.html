@@ -11,22 +11,14 @@ gltf-model="url(models/chess.gltf)">
 </a-entity>
 	</a-marker>
 </a-scene>
-	<script>
-  // Mappoint component
-
+<script>
   AFRAME.registerComponent('mappoint-handler', {
-
     init: function() {
       //console.log("I was triggered");
+      var el=this.el 
+      var t="this is chess pawn"
       const marker1 = document.querySelector("#marker1");
-     // const imgMap = document.querySelector("#img-map");
-
-      marker1.addEventListener('click', function(ev, target) {
-        const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
-	 var el=this.el 
-	 var t="this is chess pawn"
-        if (intersectedElement) {
-          console.log("Clicked");
+      marker1.addEventListener('click', function() {
 	  el.setAttribute('value',t);
         }
       });

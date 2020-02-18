@@ -13,11 +13,13 @@ gltf-model="url(models/chess.gltf)">
 	</a-marker>
 </a-scene>
 <script>
+
   AFRAME.registerComponent('mappoint-handler', {
+
     init: function() {
-      const marker1 = document.querySelector("#marker1");
-      marker1.addEventListener('click', function() {
-    			AFRAME.registerComponent('clock-text', {
+      const marker3 = document.querySelector("#marker1");
+      marker3.addEventListener('click', function() {
+            			AFRAME.registerComponent('clock-text', {
   init: function() {
     var el = this.el;
     this.ready = false;
@@ -33,11 +35,10 @@ gltf-model="url(models/chess.gltf)">
     el.setAttribute('value', 'this is chess pawn');
   }
 });
+        }
       });
     }
   });
-
-
 
 </script>
 </html>

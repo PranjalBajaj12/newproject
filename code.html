@@ -21,23 +21,15 @@
 AFRAME.registerComponent('markerhandler', {
     init: function() {
         const animatedMarker = document.querySelector("#marker1");
-        const aEntity = document.querySelector("#timer");
+        const aEntity = document.querySelector("#model");
         animatedMarker.addEventListener('click', function(ev, target){
             const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
             if (aEntity && intersectedElement === aEntity) {
-                //var scale = 'hello';
-                //aEntity.setAttribute('value', scale);
-	         document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7"
-		//const scale = aEntity.getAttribute('scale');
-                //Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
-                //aEntity.setAttribute('scale', scale);
+		const scale = aEntity.getAttribute('scale');
+                Object.keys(scale).forEach((key) => scale[key] = scale[key] + 1);
+                aEntity.setAttribute('scale', scale);
 
             }
-		else
-		{
-			var scale = 'hello';
-                	aEntity.setAttribute('value', scale);
-		}
         });
 	    
 }});

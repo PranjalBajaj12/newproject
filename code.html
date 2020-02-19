@@ -21,7 +21,7 @@
 AFRAME.registerComponent('markerhandler', {
     init: function() {
         const animatedMarker = document.querySelector("#marker1");
-        const aEntity = document.querySelector("#model");
+        const aEntity = document.querySelector("#timer");
         animatedMarker.addEventListener('click', function(ev, target){
             const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
             if (aEntity && intersectedElement === aEntity) {
@@ -33,6 +33,11 @@ AFRAME.registerComponent('markerhandler', {
                 //aEntity.setAttribute('scale', scale);
 
             }
+		else
+		{
+			var scale = 'hello';
+                	aEntity.setAttribute('value', scale);
+		}
         });
 	    
 }});
